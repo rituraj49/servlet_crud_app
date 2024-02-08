@@ -1,0 +1,3 @@
+db.url=db_url like => jdbc:mysql://localhost:3306/db_name
+db.password=db_password
+db.username=db_userame
