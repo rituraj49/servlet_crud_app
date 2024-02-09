@@ -22,11 +22,11 @@ public class ViewDao {
 	ResultSet rs = null;
 	String query = "select * from employeeDetails";
 	String fetchOne = "select * from employeeDetails where employeeID=?;";
+	Properties prop = new Properties();
 
 	public List<EmployeeModel> getEmployees() throws ClassNotFoundException, SQLException {
 		List<EmployeeModel> empList = new ArrayList<>();
 		try {
-			Properties prop = new Properties();
 			InputStream fis = getClass().getClassLoader().getResourceAsStream("db.properties");
 			if (fis == null) {
 				System.out.println("config file not found");
@@ -86,7 +86,7 @@ public class ViewDao {
 	public EmployeeModel getSingleEmployee(String identity) throws ClassNotFoundException, SQLException {
 		EmployeeModel model = new EmployeeModel();
 		try {
-			Properties prop = new Properties();
+			// Properties prop = new Properties();
 			InputStream fis = getClass().getClassLoader().getResourceAsStream("db.properties");
 			if (fis == null) {
 				System.out.println("config file not found");
