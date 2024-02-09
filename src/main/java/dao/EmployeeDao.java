@@ -27,10 +27,10 @@ public class EmployeeDao {
 			+ "address=?, contact=?, email=? WHERE employeeID=?";
 
 	String deleteQuery = "DELETE FROM employeeDetails WHERE employeeID=?;";
+	Properties props = new Properties();
 
 	public void registerEmp(EmployeeModel model) throws ClassNotFoundException, SQLException {
 		try {
-			Properties props = new Properties();
 			InputStream fis = getClass().getClassLoader().getResourceAsStream("db.properties");
 			if (fis == null) {
 				System.out.println("no file found");
@@ -82,7 +82,7 @@ public class EmployeeDao {
 
 	public void updateEmployee(EmployeeModel model) throws ClassNotFoundException, SQLException {
 		try {
-			Properties props = new Properties();
+			// Properties props = new Properties();
 			InputStream fis = getClass().getClassLoader().getResourceAsStream("db.properties");
 			if (fis == null) {
 				System.out.println("no file found");
@@ -137,7 +137,7 @@ public class EmployeeDao {
 
 	public void deleteEmployee(String id) throws ClassNotFoundException, SQLException {
 		try {
-			Properties props = new Properties();
+			// Properties props = new Properties();
 			InputStream fis = getClass().getClassLoader().getResourceAsStream("db.properties");
 			if (fis == null) {
 				System.out.println("no file found");
